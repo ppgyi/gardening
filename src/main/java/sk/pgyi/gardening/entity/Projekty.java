@@ -1,5 +1,6 @@
 package sk.pgyi.gardening.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
@@ -16,8 +17,8 @@ public class Projekty {
     @Column(name="id")
     private Long id;
 
+    @JsonBackReference
     @ManyToOne
-    @JoinColumn(name = "klient_id")
     private  Klienti klient;
 
     @Column(name="nazov")
