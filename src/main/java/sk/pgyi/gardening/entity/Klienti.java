@@ -34,11 +34,11 @@ public class Klienti {
     private String telefon;
 
     @Column(name="email")
-    private String eMail;
+    private String email;
 
     @OneToMany(mappedBy = "klient", cascade = CascadeType.ALL)
     private List<Projekty> projekty;
 
     @OneToMany(mappedBy = "klient", cascade = CascadeType.ALL)
-    private List<ProjektyUkoncene> projektyUkoncene;
+    private List<ProjektyUkoncene> projektyukoncene;
 }

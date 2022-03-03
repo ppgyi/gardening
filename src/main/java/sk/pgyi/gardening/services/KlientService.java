@@ -1,4 +1,4 @@
-package sk.pgyi.gardening;
+package sk.pgyi.gardening.services;
 
 import sk.pgyi.gardening.entity.Klienti;
 
@@ -8,5 +8,5 @@ public interface KlientService {
 
     List<Klienti> saveAll(List<Klienti> klienti);
     List<Klienti> findAll();
-
+    void deleteAll();
 }
