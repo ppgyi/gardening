@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="klienti")
@@ -34,4 +35,10 @@ public class Klienti {
 
     @Column(name="email")
     private String eMail;
+
+    @OneToMany
+    private List<Projekty> projekty;
+
+    @OneToMany
+    private List<ProjektyUkoncene> projektyUkoncene;
 }

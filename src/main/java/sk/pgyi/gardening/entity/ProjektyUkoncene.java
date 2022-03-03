@@ -16,8 +16,8 @@ public class ProjektyUkoncene {
     @Column(name="id")
     private Long id;
 
-    @Column(name="klient_id", updatable = false)
-    private Integer klientId;
+    @ManyToOne
+    private  Klienti klient;
 
     @Column(name="nazov")
     private String nazov;
