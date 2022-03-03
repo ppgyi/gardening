@@ -36,9 +36,9 @@ public class Klienti {
     @Column(name="email")
     private String eMail;
 
-    @OneToMany
+    @OneToMany(mappedBy = "klient", cascade = CascadeType.ALL)
     private List<Projekty> projekty;
 
-    @OneToMany
+    @OneToMany(mappedBy = "klient", cascade = CascadeType.ALL)
     private List<ProjektyUkoncene> projektyUkoncene;
 }

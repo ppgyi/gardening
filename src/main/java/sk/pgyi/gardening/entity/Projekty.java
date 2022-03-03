@@ -17,6 +17,7 @@ public class Projekty {
     private Long id;
 
     @ManyToOne
+    @JoinColumn(name = "klient_id")
     private  Klienti klient;
 
     @Column(name="nazov")
