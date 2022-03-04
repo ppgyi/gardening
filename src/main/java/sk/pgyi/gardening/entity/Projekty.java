@@ -2,14 +2,16 @@ package sk.pgyi.gardening.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name="projekty")
-@Data
+@Getter
+@Setter
 public class Projekty {
 
     @Id
@@ -17,8 +19,9 @@ public class Projekty {
     @Column(name="id")
     private Long id;
 
-    @JsonBackReference
+//    @JsonBackReference
     @ManyToOne
+    @JoinColumn(name = "klient_id")
     private  Klienti klient;
 
     @Column(name="nazov")
@@ -29,7 +32,7 @@ public class Projekty {
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @Column(name="datum")
-    private Date datum;
+    private LocalDate datum;
 
     @Column(name="adresaprojektu")
     private String adresaprojektu;

@@ -40,11 +40,11 @@ public class Klienti {
     // Statemaster model contains the object of Districtmaster model,
     // which itself contains the object of Statemaster model. This
     // causes an infinite json recursion.
-    @JsonManagedReference
+//    @JsonManagedReference
     @OneToMany(mappedBy = "klient", cascade = CascadeType.ALL)
     private List<Projekty> projekty;
 
-    @JsonManagedReference
+//    @JsonManagedReference
     @OneToMany(mappedBy = "klient", cascade = CascadeType.ALL)
     private List<ProjektyUkoncene> projektyukoncene;
 }

@@ -50,9 +50,4 @@ public class KlientServiceImpl implements KlientService {
     public List<Klienti> findAll() {
         return klientRepository.findAll();
     }
-
-    @Override
-    public void deleteAll() {
-        klientRepository.deleteAll();
-    }
 }

@@ -8,5 +8,4 @@ public interface KlientService {
 
     List<Klienti> saveAll(List<Klienti> klienti);
     List<Klienti> findAll();
-    void deleteAll();
 }
